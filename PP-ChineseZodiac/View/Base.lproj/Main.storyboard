@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PP_ChineseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-R7-qvb">
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="rLl-Dj-Kc2">
+                                <rect key="frame" x="0.0" y="62" width="402" height="778"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="w7U-p6-afE">
+                                        <rect key="frame" x="73.666666666666686" y="0.0" width="254.66666666666663" height="364"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Enter your birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3V-k6-rdp">
+                                                <rect key="frame" x="0.0" y="0.0" width="254.66666666666666" height="230"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="8rr-cq-Zq4">
+                                                <rect key="frame" x="0.0" y="224" width="254.66666666666666" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="atT-NI-Nze"/>
+                                                </constraints>
+                                                <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
+                                                    <!--1950-01-01 11:00:00 +0000-->
+                                                </date>
+                                                <date key="maximumDate" timeIntervalSinceReferenceDate="788871600">
+                                                    <!--2025-12-31 11:00:00 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUo-zS-QL8">
+                                        <rect key="frame" x="59" y="414" width="284.33333333333331" height="364"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-TO-tqi">
+                                                <rect key="frame" x="104.66666666666666" y="165" width="75" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="css-6M-o2f"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Go"/>
+                                                <connections>
+                                                    <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5nN-zN-Z2t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bp1-TO-tqi" firstAttribute="leading" secondItem="EUo-zS-QL8" secondAttribute="leading" constant="104.66666666666669" id="GrA-DM-dJj"/>
+                                            <constraint firstItem="bp1-TO-tqi" firstAttribute="centerY" secondItem="EUo-zS-QL8" secondAttribute="centerY" id="Q6e-d4-A3c"/>
+                                            <constraint firstItem="bp1-TO-tqi" firstAttribute="centerX" secondItem="EUo-zS-QL8" secondAttribute="centerX" id="zff-TJ-U0i"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rLl-Dj-Kc2" secondAttribute="bottom" id="Jym-Zp-Syq"/>
+                            <constraint firstItem="dEm-R7-qvb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NTz-lE-R43"/>
+                            <constraint firstItem="rLl-Dj-Kc2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QQy-P7-8kj"/>
+                            <constraint firstAttribute="bottom" secondItem="dEm-R7-qvb" secondAttribute="bottom" id="V3F-OF-LPz"/>
+                            <constraint firstItem="rLl-Dj-Kc2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WAC-8x-gaQ"/>
+                            <constraint firstAttribute="trailing" secondItem="dEm-R7-qvb" secondAttribute="trailing" id="htG-6S-gwi"/>
+                            <constraint firstItem="dEm-R7-qvb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oxV-vQ-Cd7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rLl-Dj-Kc2" secondAttribute="trailing" id="tln-8x-8am"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthdateLabel" destination="P3V-k6-rdp" id="jY5-C0-0dO"/>
+                        <outlet property="birthdatePicker" destination="8rr-cq-Zq4" id="xbi-DC-0xn"/>
+                        <outlet property="goButton" destination="bp1-TO-tqi" id="ApA-x4-I6a"/>
+                        <segue destination="cj2-51-OId" kind="presentation" identifier="goToResult" id="0Hs-Z0-ml5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="aRE-Nz-nzt">
+            <objects>
+                <viewController id="cj2-51-OId" customClass="ResultViewController" customModule="PP_ChineseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ff-RL-po7">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chinese-new-year-frame-celebration_23-2151894519" translatesAutoresizingMaskIntoConstraints="NO" id="b7N-Pu-TWX">
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Kbj-MT-1vf">
+                                <rect key="frame" x="113.66666666666669" y="270.33333333333326" width="175" height="323.66666666666674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Your Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiL-8x-AH2">
+                                        <rect key="frame" x="10" y="0.0" width="155" height="38.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snake" translatesAutoresizingMaskIntoConstraints="NO" id="xqp-jb-w4j">
+                                        <rect key="frame" x="0.0" y="70.333333333333371" width="175" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="Axf-tl-5dG"/>
+                                            <constraint firstAttribute="width" constant="175" id="ju2-VL-HdU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bU-c5-amC">
+                                        <rect key="frame" x="64.333333333333329" y="217.33333333333337" width="46" height="36"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eq-sv-LjE">
+                                        <rect key="frame" x="63.666666666666671" y="285.33333333333331" width="47.666666666666671" height="38.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="OK">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="okButtonPressed:" destination="cj2-51-OId" eventType="touchUpInside" id="tsh-aV-GtO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L3H-OO-7Ls"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kbj-MT-1vf" firstAttribute="centerX" secondItem="7Ff-RL-po7" secondAttribute="centerX" id="A7a-4Y-BIU"/>
+                            <constraint firstAttribute="bottom" secondItem="b7N-Pu-TWX" secondAttribute="bottom" id="Jty-M3-TW2"/>
+                            <constraint firstItem="Kbj-MT-1vf" firstAttribute="centerY" secondItem="7Ff-RL-po7" secondAttribute="centerY" id="KPI-cN-f42"/>
+                            <constraint firstAttribute="trailing" secondItem="b7N-Pu-TWX" secondAttribute="trailing" id="W2J-NW-ikm"/>
+                            <constraint firstItem="b7N-Pu-TWX" firstAttribute="leading" secondItem="7Ff-RL-po7" secondAttribute="leading" id="f2O-t0-ldn"/>
+                            <constraint firstItem="b7N-Pu-TWX" firstAttribute="top" secondItem="7Ff-RL-po7" secondAttribute="top" id="lx8-AH-OwN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="zodiacImageView" destination="xqp-jb-w4j" id="D9Z-wh-Ym0"/>
+                        <outlet property="zodiacLabel" destination="5bU-c5-amC" id="5TV-qe-Jdt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KhR-Oa-K3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112.2137404580153" y="20.422535211267608"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chinese-new-year-frame-celebration_23-2151894519" width="119.33333587646484" height="208.66667175292969"/>
+        <image name="mainBackground" width="90" height="135"/>
+        <image name="snake" width="134" height="120.33333587646484"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
